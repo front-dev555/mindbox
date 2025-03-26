@@ -1,11 +1,6 @@
 import React from 'react';
 import { ToggleButton, ToggleButtonGroup, Box, Button, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import { TodoFilter as FilterType } from '../types/todo';
-
-const CustomText = styled(Typography)({
-  fontSize: '14px',
-})
 
 interface TodoFilterProps {
   filter: FilterType;
@@ -30,7 +25,7 @@ export const TodoFilter: React.FC<TodoFilterProps> = ({
         gap: 2
       }}
     >
-      <CustomText>{itemsLeft} items left</CustomText>
+      <Typography>{itemsLeft} items left</Typography>
       <ToggleButtonGroup
         value={filter}
         exclusive
